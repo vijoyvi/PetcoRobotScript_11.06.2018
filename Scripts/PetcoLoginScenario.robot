@@ -17,6 +17,7 @@ Verify whether the Login Functionality of Petco is working properly
     Verify the Home Page Title
     Click on the Account icon
     Sign in to the application
+    #Adding an extra comment
     [Teardown]    Close Browser
 
 *** Keywords ***

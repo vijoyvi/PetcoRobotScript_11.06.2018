@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180510 12:47:24.675" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\Robot_Vijoy\PythonNew_AFter Tutorial\Scripts\Petco_MyAccountAutomation.robot" id="s1" name="Petco MyAccountAutomation">
+<test id="s1-t1" name="Verify whether the Registered user is able to navigate to My Account sections successfully">
+<kw name="Open Browser and launch the application">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180510 12:47:24.956" level="INFO">Opening browser 'chrome' to base url 'https://cmswcappt01.petc.com/shop/en/petcostore'</msg>
+<status status="PASS" endtime="20180510 12:47:36.047" starttime="20180510 12:47:24.956"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180510 12:47:37.224" starttime="20180510 12:47:36.047"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to the Website successfully and is maximized</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:37.225" starttime="20180510 12:47:37.225"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:47:37.225" starttime="20180510 12:47:24.956"></status>
+</kw>
+<kw name="Sign in to the application">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${HomePageTitle}</arg>
+</arguments>
+<msg timestamp="20180510 12:47:37.259" level="INFO">Page title is 'Pet Supplies, Pet Food, and Pet Products from petco.com'.</msg>
+<status status="PASS" endtime="20180510 12:47:37.259" starttime="20180510 12:47:37.226"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Title of the Home page is verified successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:37.259" starttime="20180510 12:47:37.259"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@class='account']/a/i</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:37.291" starttime="20180510 12:47:37.259"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//div[@class='account']/a/i</arg>
+</arguments>
+<msg timestamp="20180510 12:47:37.291" level="INFO">Clicking element 'xpath=//div[@class='account']/a/i'.</msg>
+<status status="PASS" endtime="20180510 12:47:37.405" starttime="20180510 12:47:37.291"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Account icon is clicked successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:37.405" starttime="20180510 12:47:37.405"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//button[text()='Sign In']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:39.591" starttime="20180510 12:47:37.405"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@name='logonId']</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20180510 12:47:39.591" level="INFO">Typing text 'bopustester@petco.com' into text field 'xpath=//input[@name='logonId']'</msg>
+<status status="PASS" endtime="20180510 12:47:40.009" starttime="20180510 12:47:39.591"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@name='logonPassword']</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20180510 12:47:40.010" level="INFO">Typing text 'Petco123' into text field 'xpath=//input[@name='logonPassword']'</msg>
+<status status="PASS" endtime="20180510 12:47:40.174" starttime="20180510 12:47:40.009"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//button[text()='Sign In']</arg>
+</arguments>
+<msg timestamp="20180510 12:47:40.174" level="INFO">Clicking element 'xpath=//button[text()='Sign In']'.</msg>
+<status status="PASS" endtime="20180510 12:47:42.562" starttime="20180510 12:47:40.174"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>SignIn button is clicked successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.563" starttime="20180510 12:47:42.563"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h1[text()='My Account']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.640" starttime="20180510 12:47:42.563"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>User is signed into the application successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.640" starttime="20180510 12:47:42.640"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:47:42.640" starttime="20180510 12:47:37.225"></status>
+</kw>
+<kw name="My Account Validation">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${AcctPageTitle}</arg>
+</arguments>
+<msg timestamp="20180510 12:47:42.640" level="INFO">Page title is 'My Account'.</msg>
+<status status="PASS" endtime="20180510 12:47:42.640" starttime="20180510 12:47:42.640"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Title of the Account page is verified successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.640" starttime="20180510 12:47:42.640"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h3[text()='Pals Rewards Contact Info']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.703" starttime="20180510 12:47:42.640"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Pals Rewards Contact Info Header is found successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.703" starttime="20180510 12:47:42.703"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h3[text()='Online Profile']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.749" starttime="20180510 12:47:42.703"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Online Profile Header is found successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.749" starttime="20180510 12:47:42.749"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h3[text()=' My Store']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.766" starttime="20180510 12:47:42.749"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My Store Header is found successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.766" starttime="20180510 12:47:42.766"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:47:42.766" starttime="20180510 12:47:42.640"></status>
+</kw>
+<kw name="Removing all Pets from Pet Profile Page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//A[text()='My Pet Profile']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.805" starttime="20180510 12:47:42.767"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//A[text()='My Pet Profile']</arg>
+</arguments>
+<msg timestamp="20180510 12:47:42.806" level="INFO">Clicking element 'xpath=//A[text()='My Pet Profile']'.</msg>
+<status status="PASS" endtime="20180510 12:47:42.903" starttime="20180510 12:47:42.806"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My Pet Profile link is clicked successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:42.904" starttime="20180510 12:47:42.903"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//A[text()='Add a New Pet']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:47.999" starttime="20180510 12:47:42.904"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to My Pet Profile page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:48.015" starttime="20180510 12:47:48.015"></status>
+</kw>
+<kw name="Get Matching Xpath Count" library="Selenium2Library">
+<doc>Returns number of elements matching `xpath`</doc>
+<arguments>
+<arg>xpath=//a[text()='Remove']</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20180510 12:47:48.030" level="INFO">${count} = 0</msg>
+<status status="PASS" endtime="20180510 12:47:48.030" starttime="20180510 12:47:48.015"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ ${count} ]">
+<status status="PASS" endtime="20180510 12:47:48.030" starttime="20180510 12:47:48.030"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:47:48.030" starttime="20180510 12:47:42.766"></status>
+</kw>
+<kw name="My Pet Profile Validation">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//A[text()='My Pet Profile']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:48.031" starttime="20180510 12:47:48.030"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//A[text()='My Pet Profile']</arg>
+</arguments>
+<msg timestamp="20180510 12:47:48.031" level="INFO">Clicking element 'xpath=//A[text()='My Pet Profile']'.</msg>
+<status status="PASS" endtime="20180510 12:47:48.122" starttime="20180510 12:47:48.031"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My Pet Profile link is clicked successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:48.122" starttime="20180510 12:47:48.122"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180510 12:47:50.124" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180510 12:47:50.124" starttime="20180510 12:47:48.123"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//A[text()='Add a New Pet']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:50.171" starttime="20180510 12:47:50.124"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to My Pet Profile page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:50.171" starttime="20180510 12:47:50.171"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//A[text()='Add a New Pet']</arg>
+</arguments>
+<msg timestamp="20180510 12:47:50.171" level="INFO">Clicking element 'xpath=//A[text()='Add a New Pet']'.</msg>
+<status status="PASS" endtime="20180510 12:47:51.864" starttime="20180510 12:47:50.171"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//H1[text()='Add a New Pet']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:51.919" starttime="20180510 12:47:51.864"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to Add a New Pet page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:51.920" starttime="20180510 12:47:51.919"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@name='petName']</arg>
+<arg>${petName}</arg>
+</arguments>
+<msg timestamp="20180510 12:47:51.920" level="INFO">Typing text 'Hachikee' into text field 'xpath=//input[@name='petName']'</msg>
+<status status="PASS" endtime="20180510 12:47:52.174" starttime="20180510 12:47:51.920"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//select[@id="new-pet-petType"]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:52.175" level="INFO">Clicking element 'xpath=//select[@id="new-pet-petType"]'.</msg>
+<status status="PASS" endtime="20180510 12:47:52.339" starttime="20180510 12:47:52.174"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'Dog')]</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:52.387" starttime="20180510 12:47:52.340"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'Dog')]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:52.388" level="INFO">Clicking element 'xpath=//option[contains(text(),'Dog')]'.</msg>
+<status status="PASS" endtime="20180510 12:47:52.446" starttime="20180510 12:47:52.387"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180510 12:47:54.449" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180510 12:47:54.449" starttime="20180510 12:47:52.446"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//select[@id="new-pet-petBreed"]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:54.449" level="INFO">Clicking element 'xpath=//select[@id="new-pet-petBreed"]'.</msg>
+<status status="PASS" endtime="20180510 12:47:54.581" starttime="20180510 12:47:54.449"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'Akita')]</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:54.626" starttime="20180510 12:47:54.581"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'Akita')]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:54.626" level="INFO">Clicking element 'xpath=//option[contains(text(),'Akita')]'.</msg>
+<status status="PASS" endtime="20180510 12:47:54.697" starttime="20180510 12:47:54.626"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//select[@name="petDobMonth"]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:54.698" level="INFO">Clicking element 'xpath=//select[@name="petDobMonth"]'.</msg>
+<status status="PASS" endtime="20180510 12:47:54.859" starttime="20180510 12:47:54.697"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'6')]</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:54.898" starttime="20180510 12:47:54.860"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'6')]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:54.899" level="INFO">Clicking element 'xpath=//option[contains(text(),'6')]'.</msg>
+<status status="PASS" endtime="20180510 12:47:54.959" starttime="20180510 12:47:54.898"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//select[@name="petDobDay"]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:54.960" level="INFO">Clicking element 'xpath=//select[@name="petDobDay"]'.</msg>
+<status status="PASS" endtime="20180510 12:47:55.129" starttime="20180510 12:47:54.959"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'24')]</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:55.165" starttime="20180510 12:47:55.129"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'24')]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:55.165" level="INFO">Clicking element 'xpath=//option[contains(text(),'24')]'.</msg>
+<status status="PASS" endtime="20180510 12:47:55.225" starttime="20180510 12:47:55.165"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//select[@name="petDobYear"]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:55.225" level="INFO">Clicking element 'xpath=//select[@name="petDobYear"]'.</msg>
+<status status="PASS" endtime="20180510 12:47:55.338" starttime="20180510 12:47:55.225"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'2013')]</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:55.383" starttime="20180510 12:47:55.339"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//option[contains(text(),'2013')]</arg>
+</arguments>
+<msg timestamp="20180510 12:47:55.384" level="INFO">Clicking element 'xpath=//option[contains(text(),'2013')]'.</msg>
+<status status="PASS" endtime="20180510 12:47:55.448" starttime="20180510 12:47:55.384"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//button[text()='save']</arg>
+</arguments>
+<msg timestamp="20180510 12:47:55.448" level="INFO">Clicking element 'xpath=//button[text()='save']'.</msg>
+<status status="PASS" endtime="20180510 12:47:59.269" starttime="20180510 12:47:55.448"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h5/div[text()='${petName}']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:59.347" starttime="20180510 12:47:59.270"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:47:59.347" starttime="20180510 12:47:48.030"></status>
+</kw>
+<kw name="PALS Rewards Validation">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//ul[@id='local-nav']/li/a[text()='Pals Rewards']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:59.395" starttime="20180510 12:47:59.347"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//ul[@id='local-nav']/li/a[text()='Pals Rewards']</arg>
+</arguments>
+<msg timestamp="20180510 12:47:59.395" level="INFO">Clicking element 'xpath=//ul[@id='local-nav']/li/a[text()='Pals Rewards']'.</msg>
+<status status="PASS" endtime="20180510 12:47:59.471" starttime="20180510 12:47:59.395"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Pals Rewards link is clicked successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:47:59.472" starttime="20180510 12:47:59.471"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//A/strong[text()='View Pals Rewards Transaction History']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:02.575" starttime="20180510 12:47:59.472"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to PALS Rewards page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:02.575" starttime="20180510 12:48:02.575"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//li[@class='user-pals-number']/strong</arg>
+</arguments>
+<assign>
+<var>${palsId}</var>
+</assign>
+<msg timestamp="20180510 12:48:02.608" level="INFO">${palsId} = Pals Rewards #513169422</msg>
+<status status="PASS" endtime="20180510 12:48:02.608" starttime="20180510 12:48:02.575"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Pals Id in the Console ${palsId}</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:02.608" starttime="20180510 12:48:02.608"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:48:02.608" starttime="20180510 12:47:59.347"></status>
+</kw>
+<kw name="Order History Validation">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//A[text()='Order History']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:02.655" starttime="20180510 12:48:02.624"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//A[text()='Order History']</arg>
+</arguments>
+<msg timestamp="20180510 12:48:02.655" level="INFO">Clicking element 'xpath=//A[text()='Order History']'.</msg>
+<status status="PASS" endtime="20180510 12:48:02.724" starttime="20180510 12:48:02.655"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Order History link is clicked successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:02.725" starttime="20180510 12:48:02.725"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180510 12:48:04.729" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180510 12:48:04.729" starttime="20180510 12:48:02.725"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h3[text()='My Orders']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:05.224" starttime="20180510 12:48:04.729"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to the My Orders successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:05.224" starttime="20180510 12:48:05.224"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//A/strong[text()='view details'])[1]</arg>
+</arguments>
+<msg timestamp="20180510 12:48:05.224" level="INFO">Clicking element 'xpath=(//A/strong[text()='view details'])[1]'.</msg>
+<status status="PASS" endtime="20180510 12:48:05.311" starttime="20180510 12:48:05.224"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>The most recent Order's link is opened to view the details</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:05.311" starttime="20180510 12:48:05.311"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//p[text()='Order Placed']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:07.181" starttime="20180510 12:48:05.312"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Order details page is displayed successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:07.182" starttime="20180510 12:48:07.182"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//strong[text()='Order Number']/parent::DIV</arg>
+</arguments>
+<assign>
+<var>${orderNo}</var>
+</assign>
+<msg timestamp="20180510 12:48:07.246" level="INFO">${orderNo} = Order Number
+94838031</msg>
+<status status="PASS" endtime="20180510 12:48:07.246" starttime="20180510 12:48:07.182"></status>
+</kw>
+<kw name="Split String From Right" library="String">
+<doc>Splits the ``string`` using ``separator`` starting from right.</doc>
+<arguments>
+<arg>${orderNo}</arg>
+<arg>,Order Number</arg>
+</arguments>
+<assign>
+<var>@{words}</var>
+</assign>
+<msg timestamp="20180510 12:48:07.246" level="INFO">@{words} = [ Order Number
+94838031 ]</msg>
+<status status="PASS" endtime="20180510 12:48:07.246" starttime="20180510 12:48:07.246"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Split functionality: @{words}[0]</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:07.246" starttime="20180510 12:48:07.246"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>The Order Number fetched: ${orderNo.strip()}</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:07.246" starttime="20180510 12:48:07.246"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:48:07.246" starttime="20180510 12:48:02.608"></status>
+</kw>
+<kw name="Change My Store Validation">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//ul[@id='local-nav']/li/a[text()='My Account']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:07.263" starttime="20180510 12:48:07.246"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//ul[@id='local-nav']/li/a[text()='My Account']</arg>
+</arguments>
+<msg timestamp="20180510 12:48:07.263" level="INFO">Clicking element 'xpath=//ul[@id='local-nav']/li/a[text()='My Account']'.</msg>
+<status status="PASS" endtime="20180510 12:48:07.343" starttime="20180510 12:48:07.263"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My Account link is clicked successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:07.343" starttime="20180510 12:48:07.343"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//A[text()='Change My Store']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:09.105" starttime="20180510 12:48:07.343"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//A[text()='Change My Store']</arg>
+</arguments>
+<msg timestamp="20180510 12:48:09.105" level="INFO">Clicking element 'xpath=//A[text()='Change My Store']'.</msg>
+<status status="PASS" endtime="20180510 12:48:09.206" starttime="20180510 12:48:09.105"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Change My Store" link is clicked</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:09.206" starttime="20180510 12:48:09.206"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h1[text()='Store Locator']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:11.381" starttime="20180510 12:48:09.206"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to Store Locator Page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:11.382" starttime="20180510 12:48:11.381"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@id='stlocZipCode']</arg>
+<arg>${prefStoreZip}</arg>
+</arguments>
+<msg timestamp="20180510 12:48:11.382" level="INFO">Typing text '92025' into text field 'xpath=//input[@id='stlocZipCode']'</msg>
+<status status="PASS" endtime="20180510 12:48:11.573" starttime="20180510 12:48:11.382"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//A[text()='Find Stores']</arg>
+</arguments>
+<msg timestamp="20180510 12:48:11.574" level="INFO">Clicking element 'xpath=//A[text()='Find Stores']'.</msg>
+<status status="PASS" endtime="20180510 12:48:13.528" starttime="20180510 12:48:11.574"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[text()[contains(.,'${prefStoreZip}')]]/ancestor::div[@class='store']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:13.591" starttime="20180510 12:48:13.528"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Searched Zip is found successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:13.592" starttime="20180510 12:48:13.592"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[text()[contains(.,'${prefStoreZip}')]]/ancestor::div[@class='store']/descendant::span[text()='Make My Store']</arg>
+</arguments>
+<msg timestamp="20180510 12:48:13.593" level="INFO">Clicking element 'xpath=//*[text()[contains(.,'92025')]]/ancestor::div[@class='store']/descendant::span[text()='Make My Store']'.</msg>
+<status status="PASS" endtime="20180510 12:48:13.761" starttime="20180510 12:48:13.593"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>//*[text()[contains(.,'${prefStoreZip}')]]/ancestor::div[@class='store']/descendant::small[text()='My Store']</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:15.700" starttime="20180510 12:48:13.762"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>The Selected Store is Set As My Store in Store Locator page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:15.700" starttime="20180510 12:48:15.700"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@class='account']/a/i</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:15.759" starttime="20180510 12:48:15.701"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//div[@class='account']/a/i</arg>
+</arguments>
+<msg timestamp="20180510 12:48:15.759" level="INFO">Clicking element 'xpath=//div[@class='account']/a/i'.</msg>
+<status status="PASS" endtime="20180510 12:48:15.848" starttime="20180510 12:48:15.759"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//h1[text()='My Account']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:17.717" starttime="20180510 12:48:15.848"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated back to the My account page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:17.717" starttime="20180510 12:48:17.717"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[text()[contains(.,'${prefStoreZip}')]]/ancestor::section[@id='my_preferred_store']</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:17.752" starttime="20180510 12:48:17.717"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>The Selected Store is Set As My Store in My Account page successfully</arg>
+</arguments>
+<status status="PASS" endtime="20180510 12:48:17.768" starttime="20180510 12:48:17.752"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:48:17.768" starttime="20180510 12:48:07.246"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180510 12:48:20.967" starttime="20180510 12:48:17.768"></status>
+</kw>
+<status status="PASS" endtime="20180510 12:48:20.967" critical="yes" starttime="20180510 12:47:24.956"></status>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="PASS" endtime="20180510 12:48:20.967" starttime="20180510 12:47:24.690"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Petco MyAccountAutomation" pass="1">Petco MyAccountAutomation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
